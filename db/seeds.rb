@@ -14,10 +14,10 @@ courses = Course.create([
 ])
 
 # Create Users
-users = User.create([
-  { name: 'User 1', password: 'password1', role: 'role1', avatar: 'avatar1', course: courses.first },
-  { name: 'User 2', password: 'password2', role: 'role2', avatar: 'avatar2', course: courses.last }
-])
+# users = User.create([
+#   { name: 'User 1',email: 'user1@gmail.com' ,password: 'password1', role: 'role1', avatar: 'avatar1', course: courses.first },
+#   { name: 'User 2',email: 'user2@gmail.com' ,password: 'password2', role: 'role2', avatar: 'avatar2', course: courses.last }
+# ])
 
 # Create Announcements
 announcements = Announcement.create([
@@ -32,9 +32,9 @@ sessions = Session.create([
 ])
 
 # Create Comments
-comments = Comment.create([
-  { content: 'Comment 1 for Session 1', session: sessions.first, user: users.first },
-  { content: 'Comment 2 for Session 2', session: sessions.last, user: users.last }
-])
+# comments = Comment.create([
+#   { content: 'Comment 1 for Session 1', session: sessions.first, user: users.first },
+#   { content: 'Comment 2 for Session 2', session: sessions.last, user: users.last }
+# ])
 
 puts 'done !!!!!!!!!'
