@@ -1,7 +1,7 @@
 require_relative '../../lib/tasks/json_web_token.rb'
 
 class AuthenticationController < ApplicationController
-  before_action :authorize_request, except: :login
+#   before_action :authorize_request, except: :login
 
   # POST /auth/login
   def login
@@ -13,10 +13,10 @@ class AuthenticationController < ApplicationController
       cookies.signed[:jwt_token] = {
         value: token,
         httponly: true,
-        expires: 24.hours.from_now
+        expires: 1000.hours.from_now
       }
 
-      render json: { name: @user.name }, status: :ok
+      render json: { name: @user.name, user_id: @user.id }, status: :ok
     else
       render json: { error: 'unauthorized' }, status: :unauthorized
     end
