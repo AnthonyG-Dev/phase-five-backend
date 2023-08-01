@@ -3244,3 +3244,357 @@ Filter chain halted as :authorize_request rendered or redirected
 Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 186)
 
 
+Started GET "/users" for 127.0.0.1 at 2023-08-01 12:00:10 +0300
+Processing by UsersController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | Allocations: 184)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-08-01 12:00:13 +0300
+Processing by UsersController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 183)
+
+
+Started OPTIONS "/" for 127.0.0.1 at 2023-08-01 14:26:16 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2023-08-01 14:26:17 +0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 493)
+Completed 200 OK in 2ms (Views: 1.3ms | Allocations: 1600)
+
+
+Started GET "/comments" for ::1 at 2023-08-01 15:18:41 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "comment"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authorize_request'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 7401)
+
+
+Started GET "/comments" for ::1 at 2023-08-01 15:18:42 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "comment"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authorize_request'
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 1333)
+
+
+Started GET "/auth/login" for ::1 at 2023-08-01 15:19:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+Started POST "/auth/login" for ::1 at 2023-08-01 15:21:34 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"user@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 202ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1531)
+
+
+Started POST "/auth/login" for ::1 at 2023-08-01 15:23:05 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"user@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 210ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 7523)
+
+
+Started GET "/users" for ::1 at 2023-08-01 15:24:46 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"user@gmail.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authorize_request'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 2428)
+
+
+Started GET "/users/1" for ::1 at 2023-08-01 19:28:18 +0300
+Processing by UsersController#show as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "id"=>"1", "user"=>{"email"=>"user@gmail.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authorize_request'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1526)
+
+
+Started GET "/users/2" for ::1 at 2023-08-01 19:28:21 +0300
+Processing by UsersController#show as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "id"=>"2", "user"=>{"email"=>"user@gmail.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authorize_request'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1534)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/users_controller.rb:11:in `show'
+Started GET "/users" for ::1 at 2023-08-01 19:28:34 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"user@gmail.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authorize_request'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 1490)
+
+
+Started POST "/users" for ::1 at 2023-08-01 19:30:53 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"test@gmail.com", "password_digest"=>"[FILTERED]", "name"=>"test", "course_id"=>1, "avatar"=>"avatar", "role"=>"role", "created_at"=>"2023-07-31T12:42:30.025Z", "updated_at"=>"2023-07-31T12:42:30.025Z", "user"=>{"email"=>"test@gmail.com", "password_digest"=>"[FILTERED]", "name"=>"test", "course_id"=>1, "avatar"=>"avatar", "role"=>"role", "created_at"=>"2023-07-31T12:42:30.025Z", "updated_at"=>"2023-07-31T12:42:30.025Z"}}
+[31mUnpermitted parameters: :password_digest, :created_at, :updated_at. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007ff9ccb16778>, params: {"email"=>"test@gmail.com", "password_digest"=>"[FILTERED]", "name"=>"test", "course_id"=>1, "avatar"=>"avatar", "role"=>"role", "created_at"=>"2023-07-31T12:42:30.025Z", "updated_at"=>"2023-07-31T12:42:30.025Z", "controller"=>"users", "action"=>"create", "user"=>{"email"=>"test@gmail.com", "password_digest"=>"[FILTERED]", "name"=>"test", "course_id"=>1, "avatar"=>"avatar", "role"=>"role", "created_at"=>"2023-07-31T12:42:30.025Z", "updated_at"=>"2023-07-31T12:42:30.025Z"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 422 Unprocessable Entity in 23ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 15537)
+
+
+Started POST "/users" for ::1 at 2023-08-01 19:31:33 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+ "user":{ {
+        "email": "test@gmail.com",
+        "password_digest": "$2a$12$NcG1T1HilGeFa4iVO/2RbeucPeqWLsrTRZ5SQgJIabgY6aigTxKHW",
+        "name": "test",
+        "course_id": 1,
+        "avatar": "avatar",
+        "role": "role",
+        "created_at": "2023-07-31T12:42:30.025Z",
+        "updated_at": "2023-07-31T12:42:30.025Z"
+    }
+ }
+
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 757)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:58:in `user_params'
+app/controllers/users_controller.rb:23:in `create'
+Started POST "/users" for ::1 at 2023-08-01 19:35:25 +0300
+Processing by UsersController#create as */*
+  Parameters: {"users"=>{"email"=>"test@gmail.com", "password_digest"=>"[FILTERED]", "name"=>"test", "course_id"=>1, "avatar"=>"avatar", "role"=>"role"}, "user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 577)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user
+Did you mean?  users):
+  
+app/controllers/users_controller.rb:58:in `user_params'
+app/controllers/users_controller.rb:23:in `create'
+Started POST "/users" for ::1 at 2023-08-01 19:35:33 +0300
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"test@gmail.com", "password_digest"=>"[FILTERED]", "name"=>"test", "course_id"=>1, "avatar"=>"avatar", "role"=>"role"}}
+[31mUnpermitted parameter: :password_digest. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007ff9ccc50788>, params: {"user"=>{"email"=>"test@gmail.com", "password_digest"=>"[FILTERED]", "name"=>"test", "course_id"=>1, "avatar"=>"avatar", "role"=>"role"}, "controller"=>"users", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 422 Unprocessable Entity in 5ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 2970)
+
+
+Started POST "/users" for ::1 at 2023-08-01 19:36:03 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"test@gmail.com", "password"=>"[FILTERED]", "name"=>"test", "course_id"=>1, "avatar"=>"avatar", "role"=>"role", "user"=>{"email"=>"test@gmail.com", "name"=>"test", "course_id"=>1, "avatar"=>"avatar", "role"=>"role"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 2854)
+
+
+Started POST "/users" for ::1 at 2023-08-01 19:36:15 +0300
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "name"=>"test", "course_id"=>1, "avatar"=>"avatar", "role"=>"role"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "test"], ["course_id", 1], ["avatar", "avatar"], ["role", "role"], ["created_at", "2023-08-01 16:36:15.707407"], ["updated_at", "2023-08-01 16:36:15.707407"]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (10.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 201 Created in 214ms (Views: 0.3ms | ActiveRecord: 11.0ms | Allocations: 3151)
+
+
+Started OPTIONS "/users" for ::1 at 2023-08-01 20:04:25 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2023-08-01 20:07:36 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2023-08-01 20:07:40 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2023-08-01 20:12:36 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2023-08-01 20:17:44 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2023-08-01 20:19:20 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2023-08-01 20:20:53 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2023-08-01 20:22:47 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2023-08-01 20:25:13 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2023-08-01 20:25:20 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2023-08-01 21:28:41 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started GET "/" for ::1 at 2023-08-01 21:31:49 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 486)
+Completed 200 OK in 3ms (Views: 1.9ms | Allocations: 1438)
+
+
+Started GET "/users" for ::1 at 2023-08-01 21:31:54 +0300
+Processing by UsersController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | Allocations: 209)
+
+
+Started GET "/users" for ::1 at 2023-08-01 21:31:56 +0300
+Processing by UsersController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 183)
+
+
+Started GET "/sessions" for ::1 at 2023-08-01 21:32:01 +0300
+Processing by SessionsController#index as HTML
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.8ms | Allocations: 18201)
+
+
+Started OPTIONS "/users" for ::1 at 2023-08-01 21:37:16 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started POST "/users" for ::1 at 2023-08-01 21:39:01 +0300
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 1ms (Allocations: 537)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:58:in `user_params'
+app/controllers/users_controller.rb:23:in `create'
+Started GET "/users" for 127.0.0.1 at 2023-08-01 21:41:18 +0300
+Processing by UsersController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | Allocations: 318)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-08-01 21:41:20 +0300
+Processing by UsersController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 183)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-08-01 21:41:33 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 6794)
+
+
+Started POST "/users" for ::1 at 2023-08-01 21:41:44 +0300
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 545)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:58:in `user_params'
+app/controllers/users_controller.rb:23:in `create'
+Started OPTIONS "/users" for ::1 at 2023-08-01 21:42:08 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started GET "/sessions" for ::1 at 2023-08-01 21:48:11 +0300
+Processing by SessionsController#index as HTML
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 5953)
+
+
+Started GET "/sessions" for ::1 at 2023-08-01 21:48:12 +0300
+Processing by SessionsController#index as HTML
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 984)
+
+
+Started GET "/users" for ::1 at 2023-08-01 21:58:28 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1155)
+
+
+Started OPTIONS "/auth/login" for ::1 at 2023-08-01 21:59:15 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/auth/login"):
+  
+Started POST "/auth/login" for ::1 at 2023-08-01 22:00:41 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"user@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 215ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1511)
+
+
+Started OPTIONS "/auth/login" for ::1 at 2023-08-01 22:09:24 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/auth/login"):
+  
+Started OPTIONS "/auth/login" for ::1 at 2023-08-01 22:09:29 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/auth/login"):
+  
