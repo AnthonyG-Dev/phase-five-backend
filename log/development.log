@@ -3598,3 +3598,532 @@ Started OPTIONS "/auth/login" for ::1 at 2023-08-01 22:09:29 +0300
   
 ActionController::RoutingError (No route matches [OPTIONS] "/auth/login"):
   
+Started POST "/users" for ::1 at 2023-08-03 12:13:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"terrencechebii@gmail.com", "password"=>"[FILTERED]", "name"=>"terrence chebii", "course_id"=>1, "avatar"=>"avatar", "role"=>"Student", "user"=>{"email"=>"terrencechebii@gmail.com", "name"=>"terrence chebii", "course_id"=>1, "avatar"=>"avatar", "role"=>"Student"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 422 Unprocessable Entity in 24ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 47334)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-08-03 12:13:55 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1440)
+
+
+Started GET "/users" for ::1 at 2023-08-03 12:18:17 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"user@gmail.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1014)
+
+
+Started POST "/auth/login" for ::1 at 2023-08-03 12:19:07 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"user@gmail", "password"=>"[FILTERED]", "authentication"=>{"email"=>"user@gmail", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@gmail"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1239)
+
+
+Started POST "/auth/login" for ::1 at 2023-08-03 12:19:28 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"user@gmail", "password"=>"[FILTERED]", "authentication"=>{"email"=>"user@gmail", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@gmail"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 602)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (24.4ms)[0m  [1m[31mDELETE FROM "courses";
+DELETE FROM "announcements";
+DELETE FROM "comments";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 1"], ["start", "2023-08-03"], ["end", "2023-08-10"], ["description", "Description for Course 1"], ["created_at", "2023-08-03 09:20:26.701086"], ["updated_at", "2023-08-03 09:20:26.701086"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 2"], ["start", "2023-08-03"], ["end", "2023-08-17"], ["description", "Description for Course 2"], ["created_at", "2023-08-03 09:20:26.705468"], ["updated_at", "2023-08-03 09:20:26.705468"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (59.6ms)[0m  [1m[31mDELETE FROM "courses";
+DELETE FROM "announcements";
+DELETE FROM "comments";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 1"], ["start", "2023-08-03"], ["end", "2023-08-10"], ["description", "Description for Course 1"], ["created_at", "2023-08-03 09:21:26.210220"], ["updated_at", "2023-08-03 09:21:26.210220"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.1ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 2"], ["start", "2023-08-03"], ["end", "2023-08-17"], ["description", "Description for Course 2"], ["created_at", "2023-08-03 09:21:26.214371"], ["updated_at", "2023-08-03 09:21:26.214371"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user1@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 1"], ["course_id", 5], ["avatar", "avatar1"], ["role", "role1"], ["created_at", "2023-08-03 09:21:26.424339"], ["updated_at", "2023-08-03 09:21:26.424339"]]
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user2@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 2"], ["course_id", 6], ["avatar", "avatar2"], ["role", "role2"], ["created_at", "2023-08-03 09:21:26.643386"], ["updated_at", "2023-08-03 09:21:26.643386"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnnouncement Create (0.1ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Announcement 1 for Course 1"], ["course_id", 5], ["created_at", "2023-08-03 09:21:26.654093"], ["updated_at", "2023-08-03 09:21:26.654093"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnnouncement Create (0.1ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Announcement 2 for Course 2"], ["course_id", 6], ["created_at", "2023-08-03 09:21:26.657707"], ["updated_at", "2023-08-03 09:21:26.657707"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSession Create (0.1ms)[0m  [1m[32mINSERT INTO "sessions" ("start", "end", "link", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start", "2023-08-03"], ["end", "2023-08-04"], ["link", "session_link_1"], ["course_id", 5], ["created_at", "2023-08-03 09:21:26.666819"], ["updated_at", "2023-08-03 09:21:26.666819"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSession Create (0.1ms)[0m  [1m[32mINSERT INTO "sessions" ("start", "end", "link", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start", "2023-08-03"], ["end", "2023-08-05"], ["link", "session_link_2"], ["course_id", 6], ["created_at", "2023-08-03 09:21:26.670532"], ["updated_at", "2023-08-03 09:21:26.670532"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "session_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Comment 1 for Session 1"], ["session_id", 3], ["user_id", 3], ["created_at", "2023-08-03 09:21:26.680485"], ["updated_at", "2023-08-03 09:21:26.680485"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (0.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "session_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Comment 2 for Session 2"], ["session_id", 4], ["user_id", 4], ["created_at", "2023-08-03 09:21:26.683967"], ["updated_at", "2023-08-03 09:21:26.683967"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users" for 127.0.0.1 at 2023-08-03 12:21:31 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1032)
+
+
+Started POST "/auth/login" for ::1 at 2023-08-03 12:22:00 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"user1@gmail", "password"=>"[FILTERED]", "authentication"=>{"email"=>"user1@gmail", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user1@gmail"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 599)
+
+
+Started POST "/auth/login" for ::1 at 2023-08-03 12:22:38 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"user1@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"user1@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 211ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1066)
+
+
+Started POST "/users" for ::1 at 2023-08-03 12:23:30 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"terrencechebii@gmail.com", "password"=>"[FILTERED]", "name"=>"terrence chebii", "course_id"=>1, "avatar"=>"avatar", "role"=>"Student", "user"=>{"email"=>"terrencechebii@gmail.com", "name"=>"terrence chebii", "course_id"=>1, "avatar"=>"avatar", "role"=>"Student"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 3289)
+
+
+Started GET "/users" for ::1 at 2023-08-03 12:23:54 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"user1@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"user1@gmail.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 1003)
+
+
+Started GET "/users" for ::1 at 2023-08-03 12:24:29 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>1, "user"=>{"email"=>"user@gmail.com", "course_id"=>1, "avatar"=>"avatar", "role"=>"role"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1005)
+
+
+Started POST "/users" for ::1 at 2023-08-03 12:24:50 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>1, "user"=>{"email"=>"user@gmail.com", "course_id"=>1, "avatar"=>"avatar", "role"=>"role"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 3106)
+
+
+Started POST "/users" for ::1 at 2023-08-03 12:25:04 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>4, "user"=>{"email"=>"user@gmail.com", "course_id"=>4, "avatar"=>"avatar", "role"=>"role"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 3099)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 12:25:15 +0300
+Processing by CoursesController#index as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>4, "course"=>{}}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1347)
+
+
+Started GET "/users" for ::1 at 2023-08-03 12:25:25 +0300
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>5, "user"=>{"email"=>"user@gmail.com", "course_id"=>5, "avatar"=>"avatar", "role"=>"role"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1018)
+
+
+Started POST "/users" for ::1 at 2023-08-03 12:25:31 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"user@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>5, "user"=>{"email"=>"user@gmail.com", "course_id"=>5, "avatar"=>"avatar", "role"=>"role"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 422 Unprocessable Entity in 5ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 2990)
+
+
+Started POST "/users" for ::1 at 2023-08-03 12:30:07 +0300
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"terrencechebii@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>5}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "terrencechebii@gmail.com"], ["password_digest", "[FILTERED]"], ["name", nil], ["course_id", 5], ["avatar", "avatar"], ["role", "role"], ["created_at", "2023-08-03 09:30:07.355214"], ["updated_at", "2023-08-03 09:30:07.355214"]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 201 Created in 206ms (Views: 0.2ms | ActiveRecord: 2.6ms | Allocations: 4324)
+
+
+Started POST "/users" for ::1 at 2023-08-03 12:30:28 +0300
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"terrencechebii@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>5}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "terrencechebii@gmail.com"], ["password_digest", "[FILTERED]"], ["name", nil], ["course_id", 5], ["avatar", "avatar"], ["role", "role"], ["created_at", "2023-08-03 09:30:28.663093"], ["updated_at", "2023-08-03 09:30:28.663093"]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 0.6ms | Allocations: 3929)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: users.email):
+  
+app/controllers/users_controller.rb:24:in `create'
+Started POST "/users" for ::1 at 2023-08-03 12:30:46 +0300
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"terrencechebii@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>5}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "terrencechebii@gmail.com"], ["password_digest", "[FILTERED]"], ["name", nil], ["course_id", 5], ["avatar", "avatar"], ["role", "role"], ["created_at", "2023-08-03 09:30:46.536554"], ["updated_at", "2023-08-03 09:30:46.536554"]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 500 Internal Server Error in 202ms (ActiveRecord: 0.4ms | Allocations: 4112)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: users.email):
+  
+app/controllers/users_controller.rb:24:in `create'
+Started GET "/users" for 127.0.0.1 at 2023-08-03 12:31:04 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1205)
+
+
+Started POST "/auth/login" for ::1 at 2023-08-03 12:32:32 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"terrencechebii@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"terrencechebii@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "terrencechebii@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 204ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 881)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (17.9ms)[0m  [1m[31mDELETE FROM "courses";
+DELETE FROM "announcements";
+DELETE FROM "comments";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 1"], ["start", "2023-08-03"], ["end", "2023-08-10"], ["description", "Description for Course 1"], ["created_at", "2023-08-03 09:35:57.581018"], ["updated_at", "2023-08-03 09:35:57.581018"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 2"], ["start", "2023-08-03"], ["end", "2023-08-17"], ["description", "Description for Course 2"], ["created_at", "2023-08-03 09:35:57.586139"], ["updated_at", "2023-08-03 09:35:57.586139"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user1@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 1"], ["course_id", 7], ["avatar", "avatar1"], ["role", "role1"], ["created_at", "2023-08-03 09:35:57.820681"], ["updated_at", "2023-08-03 09:35:57.820681"]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user2@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 2"], ["course_id", 8], ["avatar", "avatar2"], ["role", "role2"], ["created_at", "2023-08-03 09:35:58.036549"], ["updated_at", "2023-08-03 09:35:58.036549"]]
+  [1m[36mTRANSACTION (10.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnnouncement Create (0.2ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Announcement 1 for Course 1"], ["course_id", 7], ["created_at", "2023-08-03 09:35:58.057392"], ["updated_at", "2023-08-03 09:35:58.057392"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnnouncement Create (0.2ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Announcement 2 for Course 2"], ["course_id", 8], ["created_at", "2023-08-03 09:35:58.062321"], ["updated_at", "2023-08-03 09:35:58.062321"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSession Create (0.2ms)[0m  [1m[32mINSERT INTO "sessions" ("start", "end", "link", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start", "2023-08-03"], ["end", "2023-08-04"], ["link", "session_link_1"], ["course_id", 7], ["created_at", "2023-08-03 09:35:58.075893"], ["updated_at", "2023-08-03 09:35:58.075893"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSession Create (0.2ms)[0m  [1m[32mINSERT INTO "sessions" ("start", "end", "link", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start", "2023-08-03"], ["end", "2023-08-05"], ["link", "session_link_2"], ["course_id", 8], ["created_at", "2023-08-03 09:35:58.081840"], ["updated_at", "2023-08-03 09:35:58.081840"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "session_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Comment 1 for Session 1"], ["session_id", 5], ["user_id", 6], ["created_at", "2023-08-03 09:35:58.097724"], ["updated_at", "2023-08-03 09:35:58.097724"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "session_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Comment 2 for Session 2"], ["session_id", 6], ["user_id", 7], ["created_at", "2023-08-03 09:35:58.103658"], ["updated_at", "2023-08-03 09:35:58.103658"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/courses" for ::1 at 2023-08-03 12:36:34 +0300
+Processing by CoursesController#index as */*
+  Parameters: {"user"=>{"email"=>"user@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>5}, "course"=>{}}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1003)
+
+
+Started POST "/users" for ::1 at 2023-08-03 12:37:21 +0300
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"terrence chebii", "email"=>"terrencechebii@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>7}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "terrencechebii@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "terrence chebii"], ["course_id", 7], ["avatar", "avatar"], ["role", "role"], ["created_at", "2023-08-03 09:37:22.047034"], ["updated_at", "2023-08-03 09:37:22.047034"]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 201 Created in 230ms (Views: 0.3ms | ActiveRecord: 11.9ms | Allocations: 3014)
+
+
+Started GET "/users" for ::1 at 2023-08-03 12:37:30 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1152)
+
+
+Started POST "/auth/login" for ::1 at 2023-08-03 12:37:40 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"terrencechebii@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"terrencechebii@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "terrencechebii@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 218ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 837)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-08-03 12:57:22 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1348)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (19.9ms)[0m  [1m[31mDELETE FROM "courses";
+DELETE FROM "announcements";
+DELETE FROM "comments";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 1"], ["start", "2023-08-03"], ["end", "2023-08-10"], ["description", "Description for Course 1"], ["created_at", "2023-08-03 09:57:42.342011"], ["updated_at", "2023-08-03 09:57:42.342011"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 2"], ["start", "2023-08-03"], ["end", "2023-08-17"], ["description", "Description for Course 2"], ["created_at", "2023-08-03 09:57:42.347990"], ["updated_at", "2023-08-03 09:57:42.347990"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user1@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 1"], ["course_id", 9], ["avatar", "avatar1"], ["role", "role1"], ["created_at", "2023-08-03 09:57:42.576188"], ["updated_at", "2023-08-03 09:57:42.576188"]]
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user2@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 2"], ["course_id", 10], ["avatar", "avatar2"], ["role", "role2"], ["created_at", "2023-08-03 09:57:42.800998"], ["updated_at", "2023-08-03 09:57:42.800998"]]
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnnouncement Create (0.2ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Announcement 1 for Course 1"], ["course_id", 9], ["created_at", "2023-08-03 09:57:42.823538"], ["updated_at", "2023-08-03 09:57:42.823538"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnnouncement Create (0.2ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Announcement 2 for Course 2"], ["course_id", 10], ["created_at", "2023-08-03 09:57:42.828640"], ["updated_at", "2023-08-03 09:57:42.828640"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSession Create (0.2ms)[0m  [1m[32mINSERT INTO "sessions" ("start", "end", "link", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start", "2023-08-03"], ["end", "2023-08-04"], ["link", "session_link_1"], ["course_id", 9], ["created_at", "2023-08-03 09:57:42.842154"], ["updated_at", "2023-08-03 09:57:42.842154"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSession Create (0.2ms)[0m  [1m[32mINSERT INTO "sessions" ("start", "end", "link", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start", "2023-08-03"], ["end", "2023-08-05"], ["link", "session_link_2"], ["course_id", 10], ["created_at", "2023-08-03 09:57:42.847474"], ["updated_at", "2023-08-03 09:57:42.847474"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "session_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Comment 1 for Session 1"], ["session_id", 7], ["user_id", 9], ["created_at", "2023-08-03 09:57:42.862571"], ["updated_at", "2023-08-03 09:57:42.862571"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "session_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Comment 2 for Session 2"], ["session_id", 8], ["user_id", 10], ["created_at", "2023-08-03 09:57:42.867140"], ["updated_at", "2023-08-03 09:57:42.867140"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users" for 127.0.0.1 at 2023-08-03 12:57:51 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 999)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 12:57:56 +0300
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1031)
+
+
+Started POST "/users" for ::1 at 2023-08-03 12:58:15 +0300
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"terrence chebii", "email"=>"terrencechebii@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"role", "course_id"=>10}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "terrencechebii@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "terrence chebii"], ["course_id", 10], ["avatar", "avatar"], ["role", "role"], ["created_at", "2023-08-03 09:58:15.261857"], ["updated_at", "2023-08-03 09:58:15.261857"]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 201 Created in 233ms (Views: 0.8ms | ActiveRecord: 11.3ms | Allocations: 3045)
+
+
+Started GET "/users" for ::1 at 2023-08-03 12:58:22 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 1152)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 12:59:21 +0300
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 998)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 12:59:25 +0300
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 998)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 13:00:04 +0300
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 998)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 13:00:07 +0300
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 998)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 13:00:08 +0300
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 998)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 13:00:11 +0300
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 998)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 13:00:14 +0300
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 999)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 13:00:16 +0300
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 998)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 13:00:19 +0300
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 998)
+
+
+Started GET "/courses" for ::1 at 2023-08-03 13:00:37 +0300
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 998)
+
+
