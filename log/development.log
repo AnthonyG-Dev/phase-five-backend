@@ -4127,3 +4127,99 @@ Processing by CoursesController#index as */*
 Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 998)
 
 
+Started GET "/" for 127.0.0.1 at 2023-08-07 11:06:28 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.1ms | Allocations: 931)
+Completed 200 OK in 25ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 10771)
+
+
+Started GET "/courses" for ::1 at 2023-08-07 11:07:01 +0300
+Started GET "/comments" for ::1 at 2023-08-07 11:07:01 +0300
+Started GET "/users" for ::1 at 2023-08-07 11:07:01 +0300
+Started GET "/sessions" for ::1 at 2023-08-07 11:07:01 +0300
+Processing by UsersController#index as */*
+Processing by CommentsController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 26ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 5124)
+
+
+Processing by SessionsController#index as */*
+Processing by CoursesController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 112ms (Views: 68.4ms | ActiveRecord: 2.6ms | Allocations: 60149)
+
+
+Completed 200 OK in 155ms (Views: 78.7ms | ActiveRecord: 1.4ms | Allocations: 68389)
+
+
+Completed 200 OK in 110ms (Views: 56.6ms | ActiveRecord: 1.5ms | Allocations: 61252)
+
+
+Started GET "/ws" for ::1 at 2023-08-07 11:08:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started POST "/users" for ::1 at 2023-08-07 11:08:25 +0300
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Johnn Doe", "email"=>"johnn@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"TM", "course_id"=>9}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "johnn@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "Johnn Doe"], ["course_id", 9], ["avatar", "avatar"], ["role", "TM"], ["created_at", "2023-08-07 08:08:26.296572"], ["updated_at", "2023-08-07 08:08:26.296572"]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 201 Created in 333ms (Views: 0.5ms | ActiveRecord: 6.9ms | Allocations: 11691)
+
+
+Started POST "/auth/login" for ::1 at 2023-08-07 11:08:44 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"johnn@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"johnn@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "johnn@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 319ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1680)
+
+
+Started GET "/courses" for ::1 at 2023-08-07 11:09:25 +0300
+Started GET "/comments" for ::1 at 2023-08-07 11:09:25 +0300
+Processing by CommentsController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 189)
+
+
+Started GET "/users" for ::1 at 2023-08-07 11:09:25 +0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 1736)
+
+
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 1017)
+
+
+Started GET "/sessions" for ::1 at 2023-08-07 11:09:25 +0300
+Processing by SessionsController#index as */*
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.3ms | Allocations: 1018)
+
+
+Started POST "/auth/login" for ::1 at 2023-08-07 11:09:44 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"johnn@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"johnn@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "johnn@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 307ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 847)
+
+
