@@ -39,8 +39,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_31_121908) do
   end
 
   create_table "sessions", force: :cascade do |t|
-    t.date "start"
-    t.date "end"
+    t.string "start"
+    t.string "end"
     t.string "link"
     t.integer "course_id", null: false
     t.datetime "created_at", null: false
