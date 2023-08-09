@@ -20,9 +20,11 @@ announcements = Announcement.create([
 
 # Create Sessions
 sessions = Session.create([
-  { start: Date.today, end: Date.today + 1.day, link: 'session_link_1', course: courses.first },
-  { start: Date.today, end: Date.today + 2.days, link: 'session_link_2', course: courses.last }
+  { start: Time.now.strftime('%H:%M'), end: (Time.now + 1.hour).strftime('%H:%M'), link: 'https://meet.google.com/fup-umru-noo', course: courses.first },
+  { start: Time.now.strftime('%H:%M'), end: (Time.now + 2.hours).strftime('%H:%M'), link: 'https://meet.google.com/fup-umru-noo', course: courses.last }
 ])
+
+
 
 # Create Comments
 comments = Comment.create([
