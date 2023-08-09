@@ -4127,3 +4127,1587 @@ Processing by CoursesController#index as */*
 Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 998)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (1.1ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 1"], ["start", "2023-08-07"], ["end", "2023-08-14"], ["description", "Description for Course 1"], ["created_at", "2023-08-07 09:25:18.953310"], ["updated_at", "2023-08-07 09:25:18.953310"]]
+  [1m[36mTRANSACTION (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 2"], ["start", "2023-08-07"], ["end", "2023-08-21"], ["description", "Description for Course 2"], ["created_at", "2023-08-07 09:25:18.972649"], ["updated_at", "2023-08-07 09:25:18.972649"]]
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user1@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 1"], ["course_id", 11], ["avatar", "avatar1"], ["role", "role1"], ["created_at", "2023-08-07 09:25:19.240045"], ["updated_at", "2023-08-07 09:25:19.240045"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/ws" for 127.0.0.1 at 2023-08-07 12:26:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-08-07 12:26:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-08-07 12:26:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-08-07 12:27:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-08-07 12:27:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 1"], ["start", "2023-08-07"], ["end", "2023-08-14"], ["description", "Description for Course 1"], ["created_at", "2023-08-07 09:28:10.741839"], ["updated_at", "2023-08-07 09:28:10.741839"]]
+  [1m[36mTRANSACTION (32.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 2"], ["start", "2023-08-07"], ["end", "2023-08-21"], ["description", "Description for Course 2"], ["created_at", "2023-08-07 09:28:10.779449"], ["updated_at", "2023-08-07 09:28:10.779449"]]
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user1@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 1"], ["course_id", 13], ["avatar", "avatar1"], ["role", "role1"], ["created_at", "2023-08-07 09:28:11.040353"], ["updated_at", "2023-08-07 09:28:11.040353"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/ws" for ::1 at 2023-08-07 12:28:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 1"], ["start", "2023-08-07"], ["end", "2023-08-14"], ["description", "Description for Course 1"], ["created_at", "2023-08-07 09:29:29.696324"], ["updated_at", "2023-08-07 09:29:29.696324"]]
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 2"], ["start", "2023-08-07"], ["end", "2023-08-21"], ["description", "Description for Course 2"], ["created_at", "2023-08-07 09:29:29.727362"], ["updated_at", "2023-08-07 09:29:29.727362"]]
+  [1m[36mTRANSACTION (31.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user1@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 1"], ["course_id", 15], ["avatar", "avatar1"], ["role", "role1"], ["created_at", "2023-08-07 09:29:30.010743"], ["updated_at", "2023-08-07 09:29:30.010743"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/ws" for ::1 at 2023-08-07 12:30:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-08-07 12:35:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-08-07 12:43:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (1.1ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 1"], ["start", "2023-08-07"], ["end", "2023-08-14"], ["description", "Description for Course 1"], ["created_at", "2023-08-07 09:47:03.515423"], ["updated_at", "2023-08-07 09:47:03.515423"]]
+  [1m[36mTRANSACTION (23.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 2"], ["start", "2023-08-07"], ["end", "2023-08-21"], ["description", "Description for Course 2"], ["created_at", "2023-08-07 09:47:03.547537"], ["updated_at", "2023-08-07 09:47:03.547537"]]
+  [1m[36mTRANSACTION (22.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user1@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 1"], ["course_id", 17], ["avatar", "avatar1"], ["role", "role1"], ["created_at", "2023-08-07 09:47:03.822110"], ["updated_at", "2023-08-07 09:47:03.822110"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 1"], ["start", "2023-08-07"], ["end", "2023-08-14"], ["description", "Description for Course 1"], ["created_at", "2023-08-07 09:47:21.015975"], ["updated_at", "2023-08-07 09:47:21.015975"]]
+  [1m[36mTRANSACTION (33.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (1.7ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 2"], ["start", "2023-08-07"], ["end", "2023-08-21"], ["description", "Description for Course 2"], ["created_at", "2023-08-07 09:47:21.054995"], ["updated_at", "2023-08-07 09:47:21.054995"]]
+  [1m[36mTRANSACTION (33.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user1@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 1"], ["course_id", 19], ["avatar", "avatar1"], ["role", "role1"], ["created_at", "2023-08-07 09:47:21.332878"], ["updated_at", "2023-08-07 09:47:21.332878"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.6ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 1"], ["start", "2023-08-07"], ["end", "2023-08-14"], ["description", "Description for Course 1"], ["created_at", "2023-08-07 09:48:16.689513"], ["updated_at", "2023-08-07 09:48:16.689513"]]
+  [1m[36mTRANSACTION (30.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 2"], ["start", "2023-08-07"], ["end", "2023-08-21"], ["description", "Description for Course 2"], ["created_at", "2023-08-07 09:48:16.733939"], ["updated_at", "2023-08-07 09:48:16.733939"]]
+  [1m[36mTRANSACTION (20.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user1@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 1"], ["course_id", 21], ["avatar", "avatar1"], ["role", "role1"], ["created_at", "2023-08-07 09:48:16.995927"], ["updated_at", "2023-08-07 09:48:16.995927"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (109.6ms)[0m  [1m[31mDELETE FROM "courses";
+DELETE FROM "announcements";
+DELETE FROM "comments";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.7ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 1"], ["start", "2023-08-07"], ["end", "2023-08-14"], ["description", "Description for Course 1"], ["created_at", "2023-08-07 09:52:27.016405"], ["updated_at", "2023-08-07 09:52:27.016405"]]
+  [1m[36mTRANSACTION (24.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "start", "end", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Course 2"], ["start", "2023-08-07"], ["end", "2023-08-21"], ["description", "Description for Course 2"], ["created_at", "2023-08-07 09:52:27.047724"], ["updated_at", "2023-08-07 09:52:27.047724"]]
+  [1m[36mTRANSACTION (23.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user1@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 1"], ["course_id", 23], ["avatar", "avatar1"], ["role", "role1"], ["created_at", "2023-08-07 09:52:27.336534"], ["updated_at", "2023-08-07 09:52:27.336534"]]
+  [1m[36mTRANSACTION (23.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "user2@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "User 2"], ["course_id", 24], ["avatar", "avatar2"], ["role", "role2"], ["created_at", "2023-08-07 09:52:27.595540"], ["updated_at", "2023-08-07 09:52:27.595540"]]
+  [1m[36mTRANSACTION (32.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnnouncement Create (0.4ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Announcement 1 for Course 1"], ["course_id", 23], ["created_at", "2023-08-07 09:52:27.646973"], ["updated_at", "2023-08-07 09:52:27.646973"]]
+  [1m[36mTRANSACTION (24.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnnouncement Create (0.2ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Announcement 2 for Course 2"], ["course_id", 24], ["created_at", "2023-08-07 09:52:27.674903"], ["updated_at", "2023-08-07 09:52:27.674903"]]
+  [1m[36mTRANSACTION (22.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSession Create (0.4ms)[0m  [1m[32mINSERT INTO "sessions" ("start", "end", "link", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start", "2023-08-07"], ["end", "2023-08-08"], ["link", "session_link_1"], ["course_id", 23], ["created_at", "2023-08-07 09:52:27.713753"], ["updated_at", "2023-08-07 09:52:27.713753"]]
+  [1m[36mTRANSACTION (23.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSession Create (0.4ms)[0m  [1m[32mINSERT INTO "sessions" ("start", "end", "link", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start", "2023-08-07"], ["end", "2023-08-09"], ["link", "session_link_2"], ["course_id", 24], ["created_at", "2023-08-07 09:52:27.740135"], ["updated_at", "2023-08-07 09:52:27.740135"]]
+  [1m[36mTRANSACTION (35.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (2.6ms)[0m  [1m[32mINSERT INTO "comments" ("content", "session_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Comment 1 for Session 1"], ["session_id", 9], ["user_id", 12], ["created_at", "2023-08-07 09:52:27.797332"], ["updated_at", "2023-08-07 09:52:27.797332"]]
+  [1m[36mTRANSACTION (24.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "session_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Comment 2 for Session 2"], ["session_id", 10], ["user_id", 13], ["created_at", "2023-08-07 09:52:27.827717"], ["updated_at", "2023-08-07 09:52:27.827717"]]
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/announcements" for ::1 at 2023-08-07 15:37:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnnouncementsController#index as */*
+  Parameters: {"price"=>24, "pizza_id"=>1, "restaurant_id"=>2, "announcement"=>{}}
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 52ms (Views: 31.9ms | ActiveRecord: 1.0ms | Allocations: 6588)
+
+
+Started GET "/announcements/1" for ::1 at 2023-08-07 15:37:25 +0300
+Processing by AnnouncementsController#show as */*
+  Parameters: {"price"=>24, "pizza_id"=>1, "restaurant_id"=>2, "id"=>"1", "announcement"=>{}}
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" WHERE "announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/announcements_controller.rb:39:in `set_announcement'
+Completed 404 Not Found in 26ms (ActiveRecord: 0.2ms | Allocations: 2773)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Announcement with 'id'=1):
+  
+app/controllers/announcements_controller.rb:39:in `set_announcement'
+Started GET "/announcements" for ::1 at 2023-08-07 15:37:34 +0300
+Processing by AnnouncementsController#index as */*
+  Parameters: {"price"=>24, "pizza_id"=>1, "restaurant_id"=>2, "announcement"=>{}}
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 930)
+
+
+Started POST "/" for 127.0.0.1 at 2023-08-08 10:02:45 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started POST "/" for 127.0.0.1 at 2023-08-08 10:11:07 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 10:12:48 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"comment"=>"stand up at 9:00", "announcement"=>{}}
+Completed 400 Bad Request in 16ms (Allocations: 513)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 10:26:29 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"comment"=>"stand up at 9:00", "announcement"=>{}}
+Completed 400 Bad Request in 6ms (ActiveRecord: 6.5ms | Allocations: 498)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 10:33:50 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"comment"=>"stand up at 9:00", "course"=>"SDFT04", "announcement"=>{}}
+Completed 400 Bad Request in 158ms (Allocations: 486)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 10:35:04 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"comment"=>"stand up at 9:00", "announcement"=>{}}
+Completed 400 Bad Request in 10ms (Allocations: 486)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 10:35:59 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"comment"=>"stand up at 9:00", "announcement"=>{}}
+Completed 400 Bad Request in 2ms (Allocations: 486)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 10:36:04 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"comment"=>"stand up at 9:00", "announcement"=>{}}
+Completed 400 Bad Request in 1ms (Allocations: 486)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 10:49:15 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"comment"=>"stand up at 9:00", "announcement"=>{}}
+Completed 400 Bad Request in 1ms (Allocations: 486)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 10:49:23 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"comment"=>"stand up at 9:00", "announcement"=>{}}
+Completed 400 Bad Request in 1ms (Allocations: 486)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for ::1 at 2023-08-08 10:58:18 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"content"=>"Stand up at 9:00am", "course_id"=>24, "announcement"=>{"content"=>"Stand up at 9:00am", "course_id"=>24}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mCourse Load (2.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mAnnouncement Create (7.7ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Stand up at 9:00am"], ["course_id", 24], ["created_at", "2023-08-08 07:58:18.772172"], ["updated_at", "2023-08-08 07:58:18.772172"]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+Completed 201 Created in 520ms (Views: 13.3ms | ActiveRecord: 44.2ms | Allocations: 19047)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 11:00:59 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"comment"=>"stand up at 9:00", "announcement"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 487)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 11:49:08 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"comment"=>"stand up at 9:00", "announcement"=>{}}
+Completed 400 Bad Request in 54ms (Allocations: 486)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:19:03 +0300
+Processing by AnnouncementsController#create as */*
+Completed 400 Bad Request in 34ms (Allocations: 481)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:19:07 +0300
+Processing by AnnouncementsController#create as */*
+Completed 400 Bad Request in 1ms (Allocations: 480)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:20:50 +0300
+Processing by AnnouncementsController#create as */*
+Completed 400 Bad Request in 1ms (Allocations: 480)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:23:06 +0300
+Processing by AnnouncementsController#create as */*
+Completed 400 Bad Request in 8ms (Allocations: 1229)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:44:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:25:29 +0300
+Processing by AnnouncementsController#create as */*
+Completed 400 Bad Request in 1ms (Allocations: 489)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:44:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for ::1 at 2023-08-08 12:26:16 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"content"=>"Stand up at 9:00am", "course_id"=>2, "announcement"=>{"content"=>"Stand up at 9:00am", "course_id"=>2}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 148ms (Views: 16.4ms | ActiveRecord: 14.8ms | Allocations: 13347)
+
+
+Started POST "/announcements" for ::1 at 2023-08-08 12:26:29 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"content"=>"Stand up at 9:00am", "course_id"=>1, "announcement"=>{"content"=>"Stand up at 9:00am", "course_id"=>1}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mCourse Load (2.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 84ms (Views: 6.8ms | ActiveRecord: 2.8ms | Allocations: 2962)
+
+
+Started POST "/announcements" for ::1 at 2023-08-08 12:28:00 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"content"=>"Stand up at 9:00am", "course_id"=>24, "announcement"=>{"content"=>"Stand up at 9:00am", "course_id"=>24}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mAnnouncement Create (3.6ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Stand up at 9:00am"], ["course_id", 24], ["created_at", "2023-08-08 09:28:00.560713"], ["updated_at", "2023-08-08 09:28:00.560713"]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+Completed 201 Created in 85ms (Views: 6.0ms | ActiveRecord: 23.9ms | Allocations: 4519)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:28:26 +0300
+Processing by AnnouncementsController#create as */*
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms | Allocations: 490)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:44:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:29:01 +0300
+Processing by AnnouncementsController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 490)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:44:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:29:17 +0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.3ms | Allocations: 1247)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:31:27 +0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 1130)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:34:35 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (3.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 3.1ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:34:38 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.9ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.9ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:34:54 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:34:58 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (1.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 1.4ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:09 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (2.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 2.1ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:09 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (1.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 1.1ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:13 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:14 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.3ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:14 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (3.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 36ms (Views: 30.3ms | ActiveRecord: 3.1ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:15 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.6ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 25ms (Views: 15.9ms | ActiveRecord: 0.6ms | Allocations: 1134)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:35:15 +0300
+Processing by AnnouncementsController#create as */*
+Completed 400 Bad Request in 10ms (ActiveRecord: 0.0ms | Allocations: 489)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:44:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:26 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:31 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (4.9ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 8.8ms | ActiveRecord: 4.9ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:34 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:45 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:46 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:56 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:56 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (3.6ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 3.6ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:57 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:58 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:58 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:59 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:35:59 +0300
+Processing by AnnouncementsController#create as */*
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms | Allocations: 489)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:44:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:35:59 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:36:00 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:36:01 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 25ms (Views: 17.0ms | ActiveRecord: 0.3ms | Allocations: 1136)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:36:01 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (10.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 4.8ms | ActiveRecord: 10.4ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:36:02 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:36:02 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:18 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.9ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.9ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:18 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.4ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:19 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (1.5ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.5ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:20 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.8ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.8ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:20 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.3ms | Allocations: 1136)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:21 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 41ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:21 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:37:22 +0300
+Processing by AnnouncementsController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 489)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:44:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:22 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 1467)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:23 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:23 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:24 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:24 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:25 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (6.9ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 6.9ms | Allocations: 1134)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:25 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.2ms | Allocations: 1136)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:37:29 +0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.2ms | Allocations: 1131)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:38:01 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:38:15 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:38:16 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (5.0ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 5.0ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:01 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:01 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 1136)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:02 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:02 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:03 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:04 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:04 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:05 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.3ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:06 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:06 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:07 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:07 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:08 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 0.3ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:09 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:09 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 1136)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:10 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:10 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:11 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:12 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:12 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 32ms (Views: 21.5ms | ActiveRecord: 0.4ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:13 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:14 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 1136)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:14 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:15 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:15 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:16 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:17 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:17 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:18 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:19 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:19 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:20 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:20 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 34ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:21 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 1136)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:22 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:22 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:23 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:23 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:24 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:35 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:35 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1136)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:36 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.3ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:36 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.2ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:39:37 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1135)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:41:58 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (8.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 105ms (Views: 81.4ms | ActiveRecord: 8.2ms | Allocations: 1135)
+
+
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: localhost
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: localhost
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: localhost
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:47:40 +0300
+Processing by AnnouncementsController#create as */*
+Completed 400 Bad Request in 50ms (Allocations: 1217)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: announcement):
+  
+app/controllers/announcements_controller.rb:43:in `announcement_params'
+app/controllers/announcements_controller.rb:14:in `create'
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:47:46 +0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 239ms (Views: 233.1ms | ActiveRecord: 27.2ms | Allocations: 2676)
+
+
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: localhost
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:50:21 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 51ms (Views: 34.3ms | ActiveRecord: 11.6ms | Allocations: 3780)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:50:29 +0300
+Processing by AnnouncementsController#create as */*
+Completed 422 Unprocessable Entity in 58ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2426)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:51:20 +0300
+Processing by AnnouncementsController#create as */*
+Completed 422 Unprocessable Entity in 8ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 893)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:51:47 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.5ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.5ms | Allocations: 1138)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:51:53 +0300
+Processing by AnnouncementsController#create as */*
+Completed 422 Unprocessable Entity in 13ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 892)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:54:55 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (4.7ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 94ms (Views: 70.2ms | ActiveRecord: 4.7ms | Allocations: 1137)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:55:02 +0300
+Processing by AnnouncementsController#create as */*
+Completed 422 Unprocessable Entity in 334ms (Views: 31.9ms | ActiveRecord: 0.0ms | Allocations: 893)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:55:22 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (1.7ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 1.7ms | Allocations: 1137)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:55:29 +0300
+Processing by AnnouncementsController#create as */*
+Completed 422 Unprocessable Entity in 21ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 892)
+
+
+Started POST "/announcements" for ::1 at 2023-08-08 12:56:26 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"content"=>"Okayu", "course_id"=>24, "announcement"=>{"content"=>"Okayu", "course_id"=>24}}
+[31mUnpermitted parameter: :announcement. Context: { controller: AnnouncementsController, action: create, request: #<ActionDispatch::Request:0x00007f89e51fd2b0>, params: {"content"=>"Okayu", "course_id"=>24, "controller"=>"announcements", "action"=>"create", "announcement"=>{"content"=>"Okayu", "course_id"=>24}} }[0m
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mCourse Load (4.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mAnnouncement Create (4.6ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Okayu"], ["course_id", 24], ["created_at", "2023-08-08 09:56:27.329688"], ["updated_at", "2023-08-08 09:56:27.329688"]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (26.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+Completed 201 Created in 427ms (Views: 1.7ms | ActiveRecord: 63.8ms | Allocations: 6067)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 12:58:10 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 691ms (Views: 686.6ms | ActiveRecord: 0.3ms | Allocations: 1243)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:58:47 +0300
+Processing by AnnouncementsController#create as */*
+Completed 422 Unprocessable Entity in 78ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 892)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 12:59:48 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"content"=>"ok", "course_id"=>24, "announcement"=>{"content"=>"ok", "course_id"=>24}}
+[31mUnpermitted parameter: :announcement. Context: { controller: AnnouncementsController, action: create, request: #<ActionDispatch::Request:0x00007f89c7324120>, params: {"content"=>"ok", "course_id"=>24, "controller"=>"announcements", "action"=>"create", "announcement"=>{"content"=>"ok", "course_id"=>24}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mAnnouncement Create (1.4ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "ok"], ["course_id", 24], ["created_at", "2023-08-08 09:59:48.872973"], ["updated_at", "2023-08-08 09:59:48.872973"]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+Completed 201 Created in 43ms (Views: 0.5ms | ActiveRecord: 17.9ms | Allocations: 3043)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 13:00:04 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.4ms | Allocations: 1347)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 13:00:24 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"content"=>"What A Day", "course_id"=>24, "announcement"=>{"content"=>"What A Day", "course_id"=>24}}
+[31mUnpermitted parameter: :announcement. Context: { controller: AnnouncementsController, action: create, request: #<ActionDispatch::Request:0x00007f89c6e03a38>, params: {"content"=>"What A Day", "course_id"=>24, "controller"=>"announcements", "action"=>"create", "announcement"=>{"content"=>"What A Day", "course_id"=>24}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mCourse Load (1.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mAnnouncement Create (1.7ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "What A Day"], ["course_id", 24], ["created_at", "2023-08-08 10:00:24.782128"], ["updated_at", "2023-08-08 10:00:24.782128"]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (24.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+Completed 201 Created in 76ms (Views: 0.5ms | ActiveRecord: 27.9ms | Allocations: 3045)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 13:01:06 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.3ms | Allocations: 1453)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 13:01:08 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (8.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 37ms (Views: 28.7ms | ActiveRecord: 8.1ms | Allocations: 1453)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 13:01:18 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"content"=>"What A  Today", "course_id"=>24, "announcement"=>{"content"=>"What A  Today", "course_id"=>24}}
+[31mUnpermitted parameter: :announcement. Context: { controller: AnnouncementsController, action: create, request: #<ActionDispatch::Request:0x00007f89c71b2d00>, params: {"content"=>"What A  Today", "course_id"=>24, "controller"=>"announcements", "action"=>"create", "announcement"=>{"content"=>"What A  Today", "course_id"=>24}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mAnnouncement Create (1.3ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "What A  Today"], ["course_id", 24], ["created_at", "2023-08-08 10:01:18.255936"], ["updated_at", "2023-08-08 10:01:18.255936"]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (26.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+Completed 201 Created in 60ms (Views: 0.6ms | ActiveRecord: 28.3ms | Allocations: 3043)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 13:02:06 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.2ms | Allocations: 1559)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 13:02:09 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.4ms | Allocations: 1559)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 13:02:37 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.3ms | Allocations: 1559)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 13:03:15 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.3ms | Allocations: 1559)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 13:03:33 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (8.0ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 50ms (Views: 41.3ms | ActiveRecord: 8.0ms | Allocations: 1559)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2023-08-08 14:37:55 +0300
+Processing by AnnouncementsController#create as */*
+  Parameters: {"content"=>"Avail yourself for check out at 3:00pm", "course_id"=>24, "announcement"=>{"content"=>"Avail yourself for check out at 3:00pm", "course_id"=>24}}
+[31mUnpermitted parameter: :announcement. Context: { controller: AnnouncementsController, action: create, request: #<ActionDispatch::Request:0x00007f89c6c019b0>, params: {"content"=>"Avail yourself for check out at 3:00pm", "course_id"=>24, "controller"=>"announcements", "action"=>"create", "announcement"=>{"content"=>"Avail yourself for check out at 3:00pm", "course_id"=>24}} }[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mCourse Load (3.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mAnnouncement Create (11.3ms)[0m  [1m[32mINSERT INTO "announcements" ("content", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Avail yourself for check out at 3:00pm"], ["course_id", 24], ["created_at", "2023-08-08 11:37:56.055624"], ["updated_at", "2023-08-08 11:37:56.055624"]]
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/announcements_controller.rb:16:in `create'
+Completed 201 Created in 654ms (Views: 25.2ms | ActiveRecord: 77.2ms | Allocations: 3195)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2023-08-08 14:38:01 +0300
+Processing by AnnouncementsController#index as */*
+  [1m[36mAnnouncement Load (0.7ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 352ms (Views: 348.4ms | ActiveRecord: 0.7ms | Allocations: 1692)
+
+
+Started GET "/courses" for ::1 at 2023-08-09 08:41:44 +0300
+Started GET "/comments" for ::1 at 2023-08-09 08:41:45 +0300
+Started GET "/sessions" for ::1 at 2023-08-09 08:41:45 +0300
+Started GET "/users" for ::1 at 2023-08-09 08:41:45 +0300
+Processing by CoursesController#index as */*
+Processing by SessionsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mCourse Load (2.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 330ms (Views: 267.7ms | ActiveRecord: 30.5ms | Allocations: 2679)
+
+
+  [1m[36mSession Load (0.9ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 708ms (Views: 241.0ms | ActiveRecord: 4.7ms | Allocations: 14407)
+
+
+Completed 200 OK in 706ms (Views: 229.5ms | ActiveRecord: 10.6ms | Allocations: 14939)
+
+
+Processing by CommentsController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 20ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users" for ::1 at 2023-08-09 08:45:53 +0300
+Started GET "/courses" for ::1 at 2023-08-09 08:45:53 +0300
+Started GET "/sessions" for ::1 at 2023-08-09 08:45:53 +0300
+Started GET "/comments" for ::1 at 2023-08-09 08:45:53 +0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 65ms (Views: 56.7ms | ActiveRecord: 1.2ms | Allocations: 1235)
+
+
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Processing by SessionsController#index as */*
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 0.6ms | Allocations: 1382)
+
+
+  [1m[36mSession Load (1.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+Completed 200 OK in 40ms (Views: 26.9ms | ActiveRecord: 1.4ms | Allocations: 1764)
+
+
+Processing by CommentsController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 141)
+
+
+Started GET "/comments" for ::1 at 2023-08-09 08:47:22 +0300
+Started GET "/courses" for ::1 at 2023-08-09 08:47:22 +0300
+Started GET "/sessions" for ::1 at 2023-08-09 08:47:22 +0300
+Started GET "/users" for ::1 at 2023-08-09 08:47:22 +0300
+Processing by CommentsController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 164)
+
+
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (5.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 32ms (Views: 25.5ms | ActiveRecord: 5.0ms | Allocations: 1021)
+
+
+Processing by SessionsController#index as */*
+  [1m[36mSession Load (0.7ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+Processing by UsersController#index as */*
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+Completed 200 OK in 39ms (Views: 29.7ms | ActiveRecord: 0.7ms | Allocations: 1321)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 65ms (Views: 52.1ms | ActiveRecord: 0.7ms | Allocations: 2078)
+
+
+Started GET "/courses" for ::1 at 2023-08-09 08:55:07 +0300
+Started GET "/comments" for ::1 at 2023-08-09 08:55:07 +0300
+Started GET "/users" for ::1 at 2023-08-09 08:55:07 +0300
+Processing by CommentsController#index as */*
+Processing by CoursesController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 70ms (Views: 20.8ms | Allocations: 539)
+
+
+  [1m[36mCourse Load (2.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 331ms (Views: 302.5ms | ActiveRecord: 50.1ms | Allocations: 1917)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 56ms (Views: 41.8ms | ActiveRecord: 0.5ms | Allocations: 1082)
+
+
+Started GET "/comments" for ::1 at 2023-08-09 09:08:16 +0300
+Started GET "/users" for ::1 at 2023-08-09 09:08:16 +0300
+Started GET "/sessions" for ::1 at 2023-08-09 09:08:16 +0300
+Started GET "/courses" for ::1 at 2023-08-09 09:08:16 +0300
+Processing by SessionsController#index as */*
+Processing by CommentsController#index as */*
+Processing by UsersController#index as */*
+Processing by CoursesController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 401 Unauthorized in 435ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 877)
+
+
+Completed 200 OK in 630ms (Views: 589.7ms | ActiveRecord: 66.1ms | Allocations: 2473)
+
+
+  [1m[36mSession Load (0.9ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+Completed 200 OK in 385ms (Views: 286.3ms | ActiveRecord: 5.3ms | Allocations: 3170)
+
+
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+Completed 200 OK in 801ms (Views: 373.4ms | ActiveRecord: 10.6ms | Allocations: 5811)
+
+
+Started GET "/courses" for ::1 at 2023-08-09 09:43:21 +0300
+Started GET "/comments" for ::1 at 2023-08-09 09:43:21 +0300
+Started GET "/sessions" for ::1 at 2023-08-09 09:43:21 +0300
+Started GET "/users" for ::1 at 2023-08-09 09:43:21 +0300
+Processing by CoursesController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Processing by CommentsController#index as */*
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 242ms (Views: 215.2ms | ActiveRecord: 25.4ms | Allocations: 3129)
+
+
+Completed 200 OK in 225ms (Views: 109.6ms | ActiveRecord: 7.4ms | Allocations: 2396)
+
+
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 110ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 1970)
+
+
+Processing by SessionsController#index as */*
+  [1m[36mSession Load (0.7ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+Completed 200 OK in 74ms (Views: 68.2ms | ActiveRecord: 0.7ms | Allocations: 1059)
+
+
+Started GET "/users" for ::1 at 2023-08-09 09:55:42 +0300
+Started GET "/courses" for ::1 at 2023-08-09 09:55:42 +0300
+Started GET "/sessions" for ::1 at 2023-08-09 09:55:42 +0300
+Started GET "/comments" for ::1 at 2023-08-09 09:55:42 +0300
+Processing by SessionsController#index as */*
+  [1m[36mSession Load (2.0ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+Completed 200 OK in 352ms (Views: 318.3ms | ActiveRecord: 54.3ms | Allocations: 1223)
+
+
+Processing by CoursesController#index as */*
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 33ms (Views: 23.2ms | ActiveRecord: 0.4ms | Allocations: 1137)
+
+
+Processing by CommentsController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 16ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 157)
+
+
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 45ms (Views: 34.2ms | ActiveRecord: 1.1ms | Allocations: 1049)
+
+
+Started POST "/users" for ::1 at 2023-08-09 09:56:15 +0300
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"r r", "email"=>"russiavalentine@gmail.com", "password"=>"[FILTERED]", "avatar"=>"avatar", "role"=>"TM", "course_id"=>23}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mCourse Load (3.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (3.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "name", "course_id", "avatar", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "russiavalentine@gmail.com"], ["password_digest", "[FILTERED]"], ["name", "r r"], ["course_id", 23], ["avatar", "avatar"], ["role", "TM"], ["created_at", "2023-08-09 06:56:15.767523"], ["updated_at", "2023-08-09 06:56:15.767523"]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 201 Created in 545ms (Views: 7.8ms | ActiveRecord: 17.0ms | Allocations: 4830)
+
+
+Started POST "/auth/login" for ::1 at 2023-08-09 09:56:23 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"russiavalentine@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"russiavalentine@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "russiavalentine@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 471ms (Views: 1.2ms | ActiveRecord: 2.2ms | Allocations: 1321)
+
+
+Started GET "/users" for ::1 at 2023-08-09 10:40:17 +0300
+Started GET "/sessions" for ::1 at 2023-08-09 10:40:17 +0300
+Started GET "/courses" for ::1 at 2023-08-09 10:40:17 +0300
+Started GET "/comments" for ::1 at 2023-08-09 10:40:17 +0300
+Processing by CoursesController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mCourse Load (1.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/courses_controller.rb:6:in `index'
+Completed 200 OK in 483ms (Views: 406.7ms | ActiveRecord: 48.3ms | Allocations: 1676)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by SessionsController#index as */*
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mSession Load (0.8ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+Completed 200 OK in 622ms (Views: 233.6ms | ActiveRecord: 11.7ms | Allocations: 3807)
+
+
+  ↳ app/controllers/sessions_controller.rb:6:in `index'
+Completed 200 OK in 142ms (Views: 138.7ms | ActiveRecord: 0.8ms | Allocations: 1569)
+
+
+Processing by CommentsController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 17ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 141)
+
+
+Started GET "/announcements" for ::1 at 2023-08-09 10:41:04 +0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (3.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  ↳ app/controllers/announcements_controller.rb:6:in `index'
+Completed 200 OK in 109ms (Views: 79.3ms | ActiveRecord: 3.2ms | Allocations: 1688)
+
+
+Started GET "/comments" for ::1 at 2023-08-09 10:41:22 +0300
+Processing by CommentsController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Started GET "/comments" for ::1 at 2023-08-09 10:43:16 +0300
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 100ms (Views: 63.6ms | ActiveRecord: 7.1ms | Allocations: 5308)
+
+

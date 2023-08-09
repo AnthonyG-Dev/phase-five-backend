@@ -40,6 +40,6 @@ class AnnouncementsController < ApplicationController
   end
 
   def announcement_params
-    params.require(:announcement).permit(:content, :course_id)
+    params.permit(:content, :course_id)
   end
 end

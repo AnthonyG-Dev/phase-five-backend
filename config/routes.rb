@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :sessions
   resources :comments
-  resources :announcements
+  resources :announcements, only: [:index, :show, :create]
   resources :courses
   resources :users
   post '/auth/login' , to: 'authentication#login'
